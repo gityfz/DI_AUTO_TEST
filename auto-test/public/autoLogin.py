@@ -56,6 +56,7 @@ class Login(object):
                 print 'url格式错误'
                 return
             # req = urllib2.Request(url=self.url,headers=self.send_headers, data=self.data)
+
             response=opener.open(fullurl=self.url+'/login',data=data)
             # response=urllib2.urlopen(req,context=context)
             print response.code
@@ -65,9 +66,13 @@ class Login(object):
                 opener_normal.open(fullurl=self.url,data=data)
             except urllib2.HTTPError,e:
                 diurlerror.printError(e)
+            except urllib2.URLError, e:
+                diurlerror.printError(e)
             else:
                 # print response.read()
                 return cookie
+        except urllib2.URLError, e:
+            diurlerror.printError(e)
         else:
             return cookie
 
