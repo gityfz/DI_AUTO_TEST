@@ -1,6 +1,6 @@
 #!coding:utf-8
 import re
-import diurlerror
+import DiErrorUtil
 import ssl
 import urllib2
 import urllib
@@ -61,18 +61,18 @@ class Login(object):
             # response=urllib2.urlopen(req,context=context)
             print response.code
         except urllib2.HTTPError,e:
-            diurlerror.printError(e)
+            DiErrorUtil.printError(e)
             try:
                 opener_normal.open(fullurl=self.url,data=data)
             except urllib2.HTTPError,e:
-                diurlerror.printError(e)
+                DiErrorUtil.printError(e)
             except urllib2.URLError, e:
-                diurlerror.printError(e)
+                DiErrorUtil.printError(e)
             else:
                 # print response.read()
                 return cookie
         except urllib2.URLError, e:
-            diurlerror.printError(e)
+            DiErrorUtil.printError(e)
         else:
             return cookie
 

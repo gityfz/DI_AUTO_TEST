@@ -1,4 +1,4 @@
-import diurlerror
+import DiErrorUtil
 import ssl
 import urllib2
 
@@ -21,7 +21,7 @@ class Servlet(object):
             else:
                 response = opener.open(fullurl=url)
         except urllib2.HTTPError,e:
-            diurlerror.printError(e)
+            DiErrorUtil.printError(e)
         else:
             return response
 
