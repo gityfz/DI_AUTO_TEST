@@ -21,7 +21,7 @@ class Servlet(object):
             else:
                 response = opener.open(fullurl=url)
         except urllib2.HTTPError,e:
-            DiErrorUtil.printError(e)
+            DiErrorUtil.printUrlError(e)
         else:
             return response
 

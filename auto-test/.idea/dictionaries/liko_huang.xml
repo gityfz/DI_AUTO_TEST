@@ -3,12 +3,20 @@
     <words>
       <w>addheaders</w>
       <w>cookiehand</w>
+      <w>dest</w>
+      <w>deviceid</w>
       <w>deviceinfo</w>
+      <w>diviceid</w>
+      <w>endtime</w>
       <w>excule</w>
       <w>infotype</w>
       <w>logquery</w>
+      <w>orderable</w>
       <w>recordcount</w>
       <w>referer</w>
+      <w>sortedby</w>
+      <w>starttime</w>
+      <w>taskid</w>
     </words>
   </dictionary>
 </component>
