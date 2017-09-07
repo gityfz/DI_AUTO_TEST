@@ -10,6 +10,19 @@ def isString(s):
     else:
         return True
 
+def isAccount(s):
+    reg = re.compile(r'^[0-9a-zA-z_]+$')
+    if (reg.match(s)):
+        return True
+    else:
+        return False
+
+def isPassword(s):
+    if(isString(s) and len(str(s))>5 and len(str(s))<19):
+        return True
+    else:
+        return False
+
 
 def isAId(taskId):
     try:

@@ -8,7 +8,7 @@ import ParamsUtil
 import DiErrorUtil
 
 
-class newInvestigation(object):
+class InvestigationComponent(object):
     def __init__(self, url, cookie):
         self.url = url
         self.cookie = cookie
@@ -1101,6 +1101,3 @@ class newInvestigation(object):
         print "= = = = = = =接口成功返回= = = = = = ="
         return recordcount
 
-    def exportRecentInvestigation(self):
-        if(self.taskid==''):
-            raise DiErrorUtil.ParamsError('还未新建调查')
